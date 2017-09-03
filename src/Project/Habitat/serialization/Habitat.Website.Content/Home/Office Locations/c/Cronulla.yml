@@ -1,0 +1,20 @@
+﻿---
+ID: "c8a293d1-9880-40f1-8f30-399f1694a215"
+Parent: "bdda7dc5-07d6-48ee-8072-57aefcf3e5f2"
+Template: "1fe24c92-7a2e-47b9-840f-293dfc53d917"
+Path: /sitecore/content/Home/Office Locations/c/Cronulla
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "022c0182-7b42-4b19-9420-087582ca2063"
+      Hint: Longitude
+      Value: 151.152190
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170817T115847Z
+    - ID: "ed21e7a6-c30f-4335-b007-577ecd8a7a02"
+      Hint: Latitude
+      Value: "-34.057440"

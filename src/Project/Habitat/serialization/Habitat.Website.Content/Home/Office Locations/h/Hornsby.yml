@@ -1,0 +1,20 @@
+﻿---
+ID: "91fd1cc1-5079-4fbf-9a09-9c3aeeecaccf"
+Parent: "34edee2b-78d7-47fa-9fd9-dbbeeb2a029c"
+Template: "1fe24c92-7a2e-47b9-840f-293dfc53d917"
+Path: /sitecore/content/Home/Office Locations/h/Hornsby
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "022c0182-7b42-4b19-9420-087582ca2063"
+      Hint: Longitude
+      Value: 151.099010
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170817T120001Z
+    - ID: "ed21e7a6-c30f-4335-b007-577ecd8a7a02"
+      Hint: Latitude
+      Value: "-33.704900"

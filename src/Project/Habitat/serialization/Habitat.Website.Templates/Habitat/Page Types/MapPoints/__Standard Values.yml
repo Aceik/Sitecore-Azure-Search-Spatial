@@ -1,0 +1,18 @@
+﻿---
+ID: "e247cf99-9e7b-45f7-88dc-512b2c41390f"
+Parent: "4d03d371-8869-4022-9980-377af413da74"
+Template: "4d03d371-8869-4022-9980-377af413da74"
+Path: /sitecore/templates/Project/Habitat/Page Types/MapPoints/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170827T112349Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

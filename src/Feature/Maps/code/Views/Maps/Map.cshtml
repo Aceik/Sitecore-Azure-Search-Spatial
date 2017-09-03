@@ -1,0 +1,95 @@
+﻿@using Sitecore.Foundation.SitecoreExtensions.Extensions
+@model Sitecore.Mvc.Presentation.RenderingModel
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-3">
+            Search By Address:
+            <input type="text" class="my-1" name="address" id="address" value="" placeholder="eg. Melbourne CBD or 3000">
+            <button type="button" id="addressSearch" class="my-1 btn btn-primary">Search</button><br/>
+            <div id="addressLookupLat"></div>
+            <div id="addressLookupLong"></div>
+        </div>
+        <div class="col-md-3">
+            Search by Lat Long:
+            <input class="my-1" type="text" name="lat" id="lat" value="" placeholder="-29.382175" />
+            <input class="my-1" type="text" name="long" id="long" value="" placeholder="150.960935" />
+            <button  id="latLongSearch" type="button" class="btn btn-success my-1">Success</button>
+        </div>
+        <div class="col-md-3">
+            <div id="searchTime"></div>
+            <div id="searchResults"></div>
+        </div>
+        <div class="col-md-3 example-searches">
+            <h3>Example Searches: </h3>
+            <p><a href="#Melbourne" data-lat="-37.8136276" data-long="144.9630576">Melbourne 3000</a></p>
+            <p><a href="#Melbourne" data-lat="-27.4697707" data-long="153.0251235">Brisbane 4000</a></p>
+            <p><a href="#Sydney" data-lat="-33.8688197" data-long="151.2092955">Sydney 2000</a></p>
+            <p><a href="#WaggaWagga" data-lat="-35.1081689" data-long="147.3598323">Wagga Wagga (Outback)</a></p>
+            <p><a href="#Perth" data-lat="-31.9505269" data-long="115.8604572">Perth</a></p>
+        </div>
+    </div>
+</div>
+<hr />
+
+<div class="map">
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <div class="thumbnail">
+            <img src="http://maps.googleapis.com/maps/api/staticmap?size=640x360" class="img-responsive"/>
+            <div class="caption">
+                <small>Map is disabled in the Experience Editor</small>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="map-container">
+            <input type="hidden" id="mapContextItem" name="mapContextItem" value="@Model.Rendering.Item.ID"/>
+            <input type="hidden" id="mapRenderingParameters" name="mapRenderingParameters" value="@Model.Rendering.Parameters.ToJson()"/>
+            <div class="map-canvas"></div>
+        </div>
+    }
+</div>
+
+<hr/>
+
+
+<div class="row">
+    <div id="resultsContainer" style="display: inline;">
+    </div>
+</div>
+  
+<script id="resultsTemplate" type="text/x-handlebars-template">
+    <div class="col-md-12" data-id="{{id}}">
+        <div class="block">
+            <img src="{{iconUrl}}"/>
+            <h5 class="name">{{Name}}</h5>
+            <p>{{FullPath}}</p>
+            <p class="distance">{{{Distance}}} KM</p>
+            <p class="coordinsates">{{GeoLocation.Coordinates}}</p>
+        </div>
+    </div>
+    <hr/>
+</script>
+
+<hr />
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-3">
+            Search Radius (kms): 
+            <input type="text" class="my-1" name="radius" id="radius" value="200" placeholder="200">
+            @*<button type="button" id="addressSearch" class="my-1 btn btn-primary">Search</button><br />*@
+        </div>
+        <div class="col-md-3">
+            Max number or results:
+            <input type="text" class="my-1" name="max" id="max" value="50" placeholder="e.g. 50">
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script><!-- online handlebars.js-->

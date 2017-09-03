@@ -1,0 +1,20 @@
+﻿---
+ID: "636e7866-75fd-4486-8b8c-41945b161b46"
+Parent: "a45c8fc0-5c0d-4cf6-b31e-86879583a8d1"
+Template: "1fe24c92-7a2e-47b9-840f-293dfc53d917"
+Path: /sitecore/content/Home/Office Locations/p/Perth 2
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "022c0182-7b42-4b19-9420-087582ca2063"
+      Hint: Longitude
+      Value: 115.836496
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170817T115726Z
+    - ID: "ed21e7a6-c30f-4335-b007-577ecd8a7a02"
+      Hint: Latitude
+      Value: "-31.946263"

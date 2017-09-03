@@ -1,0 +1,20 @@
+﻿---
+ID: "8d845464-12d3-4c3f-b514-cee68fdc4a26"
+Parent: "b35151bd-a328-4bdd-85c2-252ac7966edc"
+Template: "1fe24c92-7a2e-47b9-840f-293dfc53d917"
+Path: /sitecore/content/Home/Office Locations/m/Melbourne Bayside
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "022c0182-7b42-4b19-9420-087582ca2063"
+      Hint: Longitude
+      Value: 145.016269
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170817T114700Z
+    - ID: "ed21e7a6-c30f-4335-b007-577ecd8a7a02"
+      Hint: Latitude
+      Value: "-37.933340"

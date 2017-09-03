@@ -1,0 +1,20 @@
+﻿---
+ID: "3a41b78e-128b-45b8-b7df-d5e2fedf5a33"
+Parent: "350a57cc-e256-4388-a0c5-69dd1f4bf31b"
+Template: "1fe24c92-7a2e-47b9-840f-293dfc53d917"
+Path: /sitecore/content/Home/Office Locations/s/Sydney Manly
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "022c0182-7b42-4b19-9420-087582ca2063"
+      Hint: Longitude
+      Value: 151.294778
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170817T114716Z
+    - ID: "ed21e7a6-c30f-4335-b007-577ecd8a7a02"
+      Hint: Latitude
+      Value: "-33.806016"

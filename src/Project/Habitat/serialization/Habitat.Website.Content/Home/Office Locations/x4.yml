@@ -1,0 +1,14 @@
+﻿---
+ID: "5c8ae1b8-9bf6-4e7a-a468-0ca846cdfc92"
+Parent: "4361fa65-d1c1-4344-9a4e-276c4c9e2083"
+Template: "adb6ca4f-03ef-4f47-b9ac-9ce2ba53ff97"
+Path: /sitecore/content/Home/Office Locations/x4
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170829T123749Z

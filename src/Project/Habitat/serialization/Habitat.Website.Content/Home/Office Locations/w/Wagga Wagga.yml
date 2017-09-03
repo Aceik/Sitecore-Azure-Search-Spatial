@@ -1,0 +1,20 @@
+﻿---
+ID: "f56d4b8c-fd81-4965-b8ba-18bfda64cb1d"
+Parent: "571ea6c1-f647-440f-b4b7-4a53f72d7f9c"
+Template: "1fe24c92-7a2e-47b9-840f-293dfc53d917"
+Path: /sitecore/content/Home/Office Locations/w/Wagga Wagga
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "022c0182-7b42-4b19-9420-087582ca2063"
+      Hint: Longitude
+      Value: 147.359832
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170817T114631Z
+    - ID: "ed21e7a6-c30f-4335-b007-577ecd8a7a02"
+      Hint: Latitude
+      Value: "-35.108169"
