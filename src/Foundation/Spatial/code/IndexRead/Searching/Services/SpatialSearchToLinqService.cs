@@ -9,10 +9,10 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using Aceik.Foundation.AddressLookup.Models;
+using System.Linq;                            
 using Aceik.Foundation.CloudSpatialSearch.IndexRead.Core;
 using Aceik.Foundation.CloudSpatialSearch.Models;
+using Geocoding;
 using Microsoft.Azure.Search;
 using Microsoft.Azure.Search.Models;
 using Sitecore;
@@ -41,7 +41,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
         /// <param name="searchRadius"></param>
         /// <param name="maxResults"></param>
         /// <returns></returns>
-        public List<SpatialSearchResultItem> GetSpatialResultsByDistance(LatLng coordinate, double searchRadius, int maxResults = 50)
+        public List<SpatialSearchResultItem> GetSpatialResultsByDistance(Location coordinate, double searchRadius, int maxResults = 50)
         {
             IEnumerable<SpatialSearchResultItem> results = GetComputedByCoordinate<SpatialSearchResultItem>(coordinate, searchRadius, maxResults);
 
@@ -60,7 +60,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
                 geoJson.Coordinates.Add(longitudeD);
                 geoJson.Coordinates.Add(latD);
 
-                spatialResult.Distance = this._distanceCalculator.CalculateDistanceGps(coordinate, new LatLng(geoJson.Coordinates[1], geoJson.Coordinates[0]));
+                spatialResult.Distance = this._distanceCalculator.CalculateDistanceGps(coordinate, new Location(geoJson.Coordinates[1], geoJson.Coordinates[0]));
                 spatialResult.GeoLocation = geoJson;
                 distanceResults.Add(spatialResult);
             }
@@ -79,7 +79,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
         /// <param name="settingsSearchRadius"></param>
         /// <param name="maxResults"></param>
         /// <returns></returns>
-        public IEnumerable<T> GetComputedByCoordinate<T>(LatLng coordinate, double settingsSearchRadius, int maxResults = 50) where T : SpatialSearchResultItem
+        public IEnumerable<T> GetComputedByCoordinate<T>(Location coordinate, double settingsSearchRadius, int maxResults = 50) where T : SpatialSearchResultItem
         {
             var indexName = string.Format(this._indexingConfiguration.IndexName, Context.Database.Name.ToLower());
             using (var context = ContentSearchManager.GetIndex(indexName).CreateSearchContext())

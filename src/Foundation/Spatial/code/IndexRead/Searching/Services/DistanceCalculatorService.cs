@@ -8,7 +8,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Device.Location;
-using Aceik.Foundation.AddressLookup.Models;
+using Geocoding;
 using Sitecore.Foundation.DependencyInjection;
 
 namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
@@ -22,7 +22,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
         /// <param name="point1"></param>
         /// <param name="point2"></param>
         /// <returns></returns>
-        public double CalculateDistanceGps(LatLng point1, LatLng point2)
+        public double CalculateDistanceGps(Location point1, Location point2)
         {
             var geoPoint1 = new GeoCoordinate(point1.Latitude, point1.Longitude);
             var distanceInMeters = geoPoint1.GetDistanceTo(new GeoCoordinate(point2.Latitude, point2.Longitude));

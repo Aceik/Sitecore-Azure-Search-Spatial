@@ -46,7 +46,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexWrite.Computed
                     double longitudeD;
                     if (!double.TryParse(longitude, out longitudeD) || !double.TryParse(lat, out latD))
                     {
-                        // todo: log error
+                        Log.Error($"Error parsing computed field geo-locations ID: {sitecoreIndexable.Item.ID.Guid.ToString()} Name: {sitecoreIndexable.Item.ID.Guid.ToString()}", this);
                         return null;
                     }
 
@@ -55,7 +55,6 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexWrite.Computed
                     return geoJson;
                 }
             }
-
             return null;
         }
     }

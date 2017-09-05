@@ -12,6 +12,9 @@ Languages:
     - ID: "022c0182-7b42-4b19-9420-087582ca2063"
       Hint: Longitude
       Value: 151.294778
+    - ID: "0553b69f-5115-4755-af49-be7331cf1eb8"
+      Hint: PlaceName
+      Value: Manly
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170817T114716Z

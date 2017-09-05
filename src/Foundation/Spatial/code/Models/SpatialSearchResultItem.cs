@@ -19,9 +19,9 @@ namespace Aceik.Foundation.CloudSpatialSearch.Models
     [DataContract]
     public class SpatialSearchResultItem
     {
-        [IndexField("_name")]
+        [IndexField("placename")]
         [DataMember]
-        public virtual string Name { get; set; }
+        public virtual string PlaceName { get; set; }
 
         [IndexField("_fullpath")]
         [DataMember]

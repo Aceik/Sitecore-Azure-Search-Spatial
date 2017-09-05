@@ -7,12 +7,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using Aceik.Foundation.AddressLookup.Models;
+using Geocoding;
 
 namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
 {
     public interface IDistanceCalculatorService
     {
-        double CalculateDistanceGps(LatLng point1, LatLng point2);
+        double CalculateDistanceGps(Location point1, Location point2);
     }
 }

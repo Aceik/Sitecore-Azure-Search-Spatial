@@ -237,12 +237,14 @@
                         searchAddress: addressVal
                     },
                     success: function (data) {
-                        if (data && data.Latitude) {
-                            $("#addressLookupLat").html("Latitude: " + data.Latitude);
-                            $("#addressLookupLat").data("latitude", data.Latitude);
-                            $("#addressLookupLong").html("Longitude: " + data.Longitude);
-                            $("#addressLookupLong").data("longitude", data.Longitude);
+                        if (data.success && data.data) {
+                            $("#addressLookupLat").html("Latitude: " + data.data.Latitude);
+                            $("#addressLookupLat").data("latitude", data.data.Latitude);
+                            $("#addressLookupLong").html("Longitude: " + data.data.Longitude);
+                            $("#addressLookupLong").data("longitude", data.data.Longitude);
                             callback();
+                        } else {
+                            alert("No location found for that address");
                         }
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
@@ -329,13 +331,13 @@
             if (latlng) {
                 var marker = new google.maps.Marker({
                     position: latlng,
-                    title: mapPoint.Name,
+                    title: mapPoint.PlaceName,
                     icon: "http://maps.google.com/mapfiles/kml/pal4/icon56.png"
                 });
 
                 var contentString =
                     "<div class='text-primary'>" +
-                    "<h2>" + mapPoint.Name + "</h2>" +
+                    "<h2>" + mapPoint.PlaceName + "</h2>" +
                     "<p>" + mapPoint.GeoLocation.Coordinates[0] + ", " + mapPoint.GeoLocation.Coordinates[1] + "</p>" +
                     "<a href='javascript:void(0)' onclick='MapModule.zoomToMapPoint(" + Aceik.map.Id + "," + latlng.lat() + "," + latlng.lng() + ")'><span class='glyphicon glyphicon-zoom-in'/></a>"
                     + "</div>";
