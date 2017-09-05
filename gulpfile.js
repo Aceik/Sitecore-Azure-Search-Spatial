@@ -75,9 +75,20 @@ gulp.task("03-Publish-All-Projects", function (callback) {
 
 gulp.task("04-Apply-Xml-Transform", function () {
   var layerPathFilters = ["./src/Foundation/**/*.transform", "./src/Feature/**/*.transform", "./src/Project/**/*.transform", "!./src/**/obj/**/*.transform", "!./src/**/bin/**/*.transform"];
+
+   var gulpRanInThisFolder = process.cwd();
+
   return gulp.src(layerPathFilters)
     .pipe(foreach(function (stream, file) {
-      var fileToTransform = file.path.replace(/.+code\\*\\(.+)\.transform/, "$1");
+        var fileToTransform = file.path.replace(/.+code\\*\\(.+)\.transform/, "$1");
+
+        // Found a bug with C drive and ConnectionStrings.config.transform a little bit frustrating
+        if (fileToTransform.indexOf("C:") > -1 && fileToTransform.indexOf("Spatial") > -1) {
+            fileToTransform = fileToTransform.replace(gulpRanInThisFolder, "");
+            fileToTransform = fileToTransform.replace("\\src\\Foundation\\Spatial\\Code\\", "");
+            fileToTransform = fileToTransform.replace(".transform", "");
+            util.log("ConnectionStrings.config.transform Found: " + fileToTransform);
+        }
       util.log("fileToTransform: " + fileToTransform);
       util.log("Applying configuration transform: " + file.path);
       return gulp.src("./scripts/applytransform.targets")
