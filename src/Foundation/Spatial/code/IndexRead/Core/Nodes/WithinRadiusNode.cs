@@ -29,8 +29,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Nodes
             get;
             protected set;
         }
-
-
+              
         public override QueryNodeType NodeType
         {
             get { return QueryNodeType.Custom; }
@@ -52,13 +51,11 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Nodes
 
         public WithinRadiusNode(object lat, object lng, object name, object withinRadiusinMiles, float boost, object distanceSort, object maxResults)
         {
-            //SourceNode = sourceNode;
             Latitude = lat;
             Longitude = lng;
             Radius = withinRadiusinMiles;
             MaxResults = maxResults;
-            this.Boost = boost;
-            //Field = field;
+            Boost = boost;
             DistanceSort = distanceSort;
             FieldName = name;
         }

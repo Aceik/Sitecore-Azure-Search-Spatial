@@ -24,6 +24,12 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core
         {
         }
 
+        /// <summary>
+        /// Overrides the base   HandleCloudQuery so that we can support a spatial search VisitWithinRadius.
+        /// </summary>
+        /// <param name="node"></param>
+        /// <param name="mappingState"></param>
+        /// <returns></returns>
         protected override string HandleCloudQuery(QueryNode node, CloudQueryMapper.CloudQueryMapperState mappingState)
         {
             if (node.NodeType == QueryNodeType.Custom)
@@ -36,6 +42,12 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core
             return base.HandleCloudQuery(node, mappingState);
         }
 
+        /// <summary>
+        /// Provides a Geo Spatial Search Query linq provider.
+        /// </summary>
+        /// <param name="radiusNode"></param>
+        /// <param name="state"></param>
+        /// <returns></returns>
         protected virtual string VisitWithinRadius(WithinRadiusNode radiusNode, CloudQueryMapper.CloudQueryMapperState state)
         {
             var orderBy = string.Empty;

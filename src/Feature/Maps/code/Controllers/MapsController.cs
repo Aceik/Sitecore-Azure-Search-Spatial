@@ -8,18 +8,15 @@ namespace Sitecore.Feature.Maps.Controllers
     using System;
     using System.Web.Mvc;
     using Data;
-    using Repositories;
     using Aceik.Foundation.AddressLookup.Services;
     using Aceik.Foundation.CloudSpatialSearch.Models;
 
     public class MapsController : Mvc.Controllers.SitecoreController
     {
-        private readonly IMapPointRepository _mapPointRepository;
         private readonly ISpatialSearchService _searhOfficeService;
 
-        public MapsController(IMapPointRepository mapPointRepository, ILocationSearchService googleSearchService, ISpatialSearchService searhOfficeService)
+        public MapsController(ILocationSearchService googleSearchService, ISpatialSearchService searhOfficeService)
         {
-            this._mapPointRepository = mapPointRepository;
             _searhOfficeService = searhOfficeService;
             GoogleSearchService = googleSearchService;
         }
@@ -31,7 +28,7 @@ namespace Sitecore.Feature.Maps.Controllers
         public JsonResult GetMapPoints(double lat, double longitude, double radius, int maxResults = 50)
         {
             var beginSearchTime = DateTime.Now;
-            var spatialResults = this._searhOfficeService.GetSpatialResultsAndDistance(new LatLng(lat, longitude), radius, maxResults).OrderBy(x => x.Distance);
+            var spatialResults = this._searhOfficeService.GetSpatialResultsByDistance(new LatLng(lat, longitude), radius, maxResults);
             var endSearchTime = DateTime.Now;
             TimeSpan spanDifference = endSearchTime - beginSearchTime;
             int msSeachTook = (int)spanDifference.TotalMilliseconds;

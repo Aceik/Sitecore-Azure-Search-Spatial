@@ -23,7 +23,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexWrite.Computed
         public string ReturnType { get; set; }
 
         /// <summary>
-        /// This method looks for clubs and stores the club region as a lower case string in the index.
+        /// Based on an office location store Lat Long in GeoJson format for storage in the Azure Search Index.
         /// </summary>
         /// <param name="indexable">This indexable item.</param>
         /// <returns>A value to be stored under this field.</returns>

@@ -21,7 +21,7 @@ using Sitecore.ContentSearch.Utilities;
 namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core
 {
     /// <summary>
-    /// The search extensions.
+    /// Enable a search extension to perform a spatial linq query.
     /// </summary>
     public static  class SearchExtensions
     {
@@ -31,7 +31,6 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core
         }
 
         public static IQueryable<TResult> GetExtendedQueryable<TResult>(this IProviderSearchContext context, params IExecutionContext[] executionContext)
-
         {
             IQueryable<TResult> queryable;
             if (context is AzureSearchWithSpatialContext cloudContext)
@@ -42,7 +41,6 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core
             {
                 throw new NotImplementedException("Current Index is not configured to use Spatial Search.");
             }
-            ;
             return queryable;
         }
 

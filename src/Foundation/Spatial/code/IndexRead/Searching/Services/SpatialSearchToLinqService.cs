@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="SpatialSearchService.cs" company="FLG">
+// <copyright file="SpatialSearchToLinqService.cs" company="FLG">
 //   FLG 2017
 // </copyright>
 // <summary>
-//   Defines the SpatialSearchService type.
+//   Defines the SpatialSearchToLinqService type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -22,19 +22,26 @@ using Sitecore.Foundation.DependencyInjection;
 
 namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
 {
-    [Service(typeof(ISpatialSearchService))]
+    //[Service(typeof(ISpatialSearchService))]
     public class SpatialSearchToLinqService : ISpatialSearchService
     {
-        private readonly IIndexConfiguration indexingConfiguration;
+        private readonly IIndexConfiguration _indexingConfiguration;
         private readonly IDistanceCalculatorService _distanceCalculator;
 
         public SpatialSearchToLinqService(IIndexConfiguration indexingConfiguration, IDistanceCalculatorService distanceCalculator)
         {
-            this.indexingConfiguration = indexingConfiguration;
+            this._indexingConfiguration = indexingConfiguration;
             _distanceCalculator = distanceCalculator;
         }
 
-        public List<SpatialSearchResultItem> GetSpatialResultsAndDistance(LatLng coordinate, double searchRadius, int maxResults = 50)
+        /// <summary>
+        /// Given a coordinate, and a search radius lookup a number of results
+        /// </summary>
+        /// <param name="coordinate"></param>
+        /// <param name="searchRadius"></param>
+        /// <param name="maxResults"></param>
+        /// <returns></returns>
+        public List<SpatialSearchResultItem> GetSpatialResultsByDistance(LatLng coordinate, double searchRadius, int maxResults = 50)
         {
             IEnumerable<SpatialSearchResultItem> results = GetComputedByCoordinate<SpatialSearchResultItem>(coordinate, searchRadius, maxResults);
 
@@ -47,8 +54,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
                 double longitudeD;
                 if (!double.TryParse(spatialResult.Longitude, out longitudeD) || !double.TryParse(spatialResult.Latitude, out latD))
                 {
-                    // todo: log error
-                    return null;
+                    continue;
                 }
 
                 geoJson.Coordinates.Add(longitudeD);
@@ -58,12 +64,24 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
                 spatialResult.GeoLocation = geoJson;
                 distanceResults.Add(spatialResult);
             }
-            return distanceResults;
+            return distanceResults.OrderBy(x => x.Distance).ToList();
         }
 
+        /// <summary>
+        /// Perform a Geo Spatial search using the ContentSearchManager and the   WithinRadius lookup.
+        /// 
+        /// Current limitation is that ordering and maxResults are being filtered by standard Sitecore code.  Yet to work out a way around this.
+        /// If you need ordering within the query and more results, please use the direct query implementation SpatialSearchService.cs for now.
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="coordinate"></param>
+        /// <param name="settingsSearchRadius"></param>
+        /// <param name="maxResults"></param>
+        /// <returns></returns>
         public IEnumerable<T> GetComputedByCoordinate<T>(LatLng coordinate, double settingsSearchRadius, int maxResults = 50) where T : SpatialSearchResultItem
         {
-            var indexName = string.Format(this.indexingConfiguration.IndexName, Context.Database.Name.ToLower());
+            var indexName = string.Format(this._indexingConfiguration.IndexName, Context.Database.Name.ToLower());
             using (var context = ContentSearchManager.GetIndex(indexName).CreateSearchContext())
             {
                 string fieldName = Sitecore.Configuration.Settings.GetSetting("Foundation.GeoSearch.Azure.GeoJsonFieldName", "geo_location");

@@ -18,6 +18,6 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
     {
         IEnumerable<T> GetComputedByCoordinate<T>(LatLng coordinate, double settingsSearchRadius, int maxResults = 50) where T : SpatialSearchResultItem;
 
-        List<SpatialSearchResultItem> GetSpatialResultsAndDistance(LatLng coordinate, double searchRadius, int maxResults = 50);
+        List<SpatialSearchResultItem> GetSpatialResultsByDistance(LatLng coordinate, double searchRadius, int maxResults = 50);
     }
 }

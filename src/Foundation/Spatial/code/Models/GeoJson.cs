@@ -12,7 +12,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// Search results within radius of a specific point
+        /// Search results within radius of a specific point. This method is an entry point for Linq.
         /// </summary>
         /// <param name="latitude">Latitude of the search point</param>
         /// <param name="longitude">Logitude of the search point</param>

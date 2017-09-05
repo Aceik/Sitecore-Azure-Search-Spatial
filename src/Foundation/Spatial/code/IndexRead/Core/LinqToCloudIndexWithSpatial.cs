@@ -20,27 +20,21 @@ using Sitecore.ContentSearch.Linq.Parsing;
 namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core
 {
     public class LinqToCloudIndexWithSpatial<TItem> : LinqToCloudIndex<TItem>
-    {
-
+    {           
         private readonly QueryMapper<CloudQuery> queryMapper;
         private readonly QueryOptimizer<CloudQueryOptimizerState> queryOptimizer; 
 
-        public LinqToCloudIndexWithSpatial(CloudSearchSearchContext context, IExecutionContext executionContext)
-            : this(context, new IExecutionContext[] { executionContext })
+        public LinqToCloudIndexWithSpatial(CloudSearchSearchContext context, IExecutionContext executionContext) : this(context, new IExecutionContext[] { executionContext })
         {
             
         }
 
         public LinqToCloudIndexWithSpatial(CloudSearchSearchContext context, IExecutionContext[] executionContexts) : base(context, executionContexts)
         {
-            var parameters =
-                new CloudIndexParameters(context.Index.Configuration.IndexFieldStorageValueFormatter, context.Index.Configuration.VirtualFields, context.Index.FieldNameTranslator, typeof(TItem), false, executionContexts, context.Index.Schema);
-
+            var parameters = new CloudIndexParameters(context.Index.Configuration.IndexFieldStorageValueFormatter, context.Index.Configuration.VirtualFields, context.Index.FieldNameTranslator, typeof(TItem), false, executionContexts, context.Index.Schema);
             this.queryMapper = new CloudSpatialQueryMapper(parameters);
             this.queryOptimizer = new SpatialCloudQueryOptimizer();
         }
-
-
 
         protected override QueryMapper<CloudQuery> QueryMapper
         {

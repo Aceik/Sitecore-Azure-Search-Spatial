@@ -21,8 +21,9 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
     /// </summary>
     public class AzureSearchIndexWithSpatial : CloudSearchProviderIndex
     {
+        /// <inheritdoc />
         /// <summary>
-        /// Initializes a new instance of the <see cref="AzureSearchIndexWithSpatial"/> class.
+        /// Initializes a new instance of the <see cref="T:Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Provider.AzureSearchIndexWithSpatial" /> class.
         /// </summary>
         /// <param name="name">
         /// The name.

@@ -33,8 +33,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Parsing
         /// <param name="fieldNameTranslator">
         /// The field name translator.
         /// </param>
-        public ExtendedGenericQueryable(Index<TElement, TQuery> index, QueryMapper<TQuery> queryMapper, IQueryOptimizer queryOptimizer, FieldNameTranslator fieldNameTranslator) : 
-            base(index, queryMapper, queryOptimizer, fieldNameTranslator)
+        public ExtendedGenericQueryable(Index<TElement, TQuery> index, QueryMapper<TQuery> queryMapper, IQueryOptimizer queryOptimizer, FieldNameTranslator fieldNameTranslator) : base(index, queryMapper, queryOptimizer, fieldNameTranslator)
         {
         }
 

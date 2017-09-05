@@ -16,6 +16,12 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
     [Service(typeof(IDistanceCalculatorService))]
     public class DistanceCalculatorService : IDistanceCalculatorService
     {
+        /// <summary>
+        /// Calculate the distance in KM between two coordinates.
+        /// </summary>
+        /// <param name="point1"></param>
+        /// <param name="point2"></param>
+        /// <returns></returns>
         public double CalculateDistanceGps(LatLng point1, LatLng point2)
         {
             var geoPoint1 = new GeoCoordinate(point1.Latitude, point1.Longitude);

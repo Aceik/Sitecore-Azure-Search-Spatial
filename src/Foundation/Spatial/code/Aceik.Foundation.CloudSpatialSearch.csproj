@@ -120,7 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IndexRead\Common\GenericDumpable.cs" />
-    <Compile Include="Models\AzureIndexItem.cs" />
+    <Compile Include="Models\SpatialSearchResultItem.cs" />
     <Compile Include="IndexRead\Searching\Services\SpatialSearchToLinqService.cs" />
     <Compile Include="IndexWrite\Formatter\GeoCloudIndexFieldStorageValueFormatter.cs" />
     <Compile Include="IndexWrite\Computed\GeoLocationField.cs" />
