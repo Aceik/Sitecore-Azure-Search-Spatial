@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<connectionStrings xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+    <add name="cloud.search"
+         connectionString="serviceUrl=https://testing.search.windows.net;apiVersion=2015-02-28-Preview;apiKey="
+         xdt:Locator="Match(name)"
+         xdt:Transform="InsertIfMissing"/>
+</connectionStrings>
