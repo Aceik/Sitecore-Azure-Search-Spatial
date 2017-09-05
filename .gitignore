@@ -27,3 +27,4 @@ temp/
 .vscode
 nCrunchTemp*.*
 /src/Project/Common/code/bower_components
+/src/Foundation/Spatial/Code/App_Config/ConnectionStrings.config.transform
