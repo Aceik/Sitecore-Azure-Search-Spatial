@@ -33,6 +33,7 @@ gulp.task("default", function (callback) {
     "02-Nuget-Restore",
     "03-Publish-All-Projects",
     "04-Apply-Xml-Transform",
+	"Publish-All-Configs",
     "05-Sync-Unicorn",
     "06-Deploy-Transforms",
 	callback);
