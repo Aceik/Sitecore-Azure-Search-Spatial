@@ -28,3 +28,4 @@ temp/
 nCrunchTemp*.*
 /src/Project/Common/code/bower_components
 /src/Foundation/Spatial/Code/App_Config/ConnectionStrings.config.transform
+/src/Foundation/Spatial/code/App_Config/ConnectionStrings.config.transform
