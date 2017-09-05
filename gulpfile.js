@@ -77,7 +77,8 @@ gulp.task("04-Apply-Xml-Transform", function () {
   var layerPathFilters = ["./src/Foundation/**/*.transform", "./src/Feature/**/*.transform", "./src/Project/**/*.transform", "!./src/**/obj/**/*.transform", "!./src/**/bin/**/*.transform"];
   return gulp.src(layerPathFilters)
     .pipe(foreach(function (stream, file) {
-      var fileToTransform = file.path.replace(/.+code\\(.+)\.transform/, "$1");
+      var fileToTransform = file.path.replace(/.+code\\*\\(.+)\.transform/, "$1");
+      util.log("fileToTransform: " + fileToTransform);
       util.log("Applying configuration transform: " + file.path);
       return gulp.src("./scripts/applytransform.targets")
         .pipe(msbuild({

@@ -8,7 +8,7 @@ module.exports = function () {
     buildConfiguration: "Debug",
     buildToolsVersion: 15.0,
     buildMaxCpuCount: 0,
-    buildVerbosity: "minimal",
+    buildVerbosity: "Detailed",
     buildPlatform: "Any CPU",
     publishPlatform: "AnyCpu",
     runCleanBuilds: false
