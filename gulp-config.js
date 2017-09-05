@@ -1,5 +1,5 @@
 module.exports = function () {
-    var instanceRoot = "D:\\Development\\projects\\sc82u5.dev.local";
+    var instanceRoot = "C:\\Websites\\sc82u5.dev.local";
   var config = {
     websiteRoot: instanceRoot + "\\Website",
     sitecoreLibraries: instanceRoot + "\\Website\\bin",
