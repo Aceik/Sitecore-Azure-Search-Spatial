@@ -56,6 +56,20 @@ Usage: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/06-Sitecore-P
       <Exclude />
       <Name>Configs and DLLs</Name>
     </xfiles>
+    <xfiles>
+      <Entries>
+        <x-item>/Views/Spatial/InstallationTest.cshtml</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms />
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Installaton Test</Name>
+    </xfiles>
   </Sources>
   <Converter>
     <TrivialConverter>
