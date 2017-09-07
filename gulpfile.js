@@ -547,9 +547,7 @@ gulp.task('Z-Search-Disable-Lucene-Configs', function () {
 
     return Promise.all([
         new Promise(function (resolve, reject) {
-
-
-
+            
             gulp.src(roots).pipe(rename(function (path) {
                 path.extname = ".config.disabled";
             })).pipe(gulp.dest(root));

@@ -1,0 +1,12 @@
+﻿@using Sitecore.Foundation.SitecoreExtensions.Extensions
+@model List<Aceik.Foundation.CloudSpatialSearch.Models.SpatialSearchResultItem>
+
+@foreach (var result in Model)
+{
+    <h1>@result.PlaceName</h1>
+    <br />
+    <h2>Lat: @result.Latitude Long: @result.Longitude</h2>
+    <br />
+    <p>Distance: @result.Distance</p>
+    <br/><hr/>
+}

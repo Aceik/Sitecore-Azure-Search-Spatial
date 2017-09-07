@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching;
 using Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services;
 using Geocoding;
 using Geocoding.Google;
@@ -15,11 +16,11 @@ namespace Sitecore.Feature.Maps.Controllers
 
     public class MapsController : Mvc.Controllers.SitecoreController
     {
-        private readonly ISpatialSearchService _searhOfficeService;
+        private readonly ISpatialSearchService _searchOfficeService;
 
         public MapsController(ISpatialSearchService searhOfficeService)
         {
-            _searhOfficeService = searhOfficeService;   
+            _searchOfficeService = searhOfficeService;   
         }                                                          
 
         [HttpPost]
@@ -27,7 +28,7 @@ namespace Sitecore.Feature.Maps.Controllers
         public JsonResult GetMapPoints(double lat, double longitude, double radius, int maxResults = 50)
         {
             var beginSearchTime = DateTime.Now;
-            var spatialResults = this._searhOfficeService.GetSpatialResultsByDistance(new Location(lat, longitude), radius, maxResults);
+            var spatialResults = this._searchOfficeService.GetSpatialResultsByDistance(new Location(lat, longitude), radius, maxResults);
             var endSearchTime = DateTime.Now;
             TimeSpan spanDifference = endSearchTime - beginSearchTime;
             int msSeachTook = (int)spanDifference.TotalMilliseconds;

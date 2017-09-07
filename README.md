@@ -9,7 +9,7 @@ For more information on **Helix**, please go to [helix.sitecore.net](http://heli
 For more information on **Sitecore Azure Search overview**, please go to [the documentation](https://doc.sitecore.net/sitecore_experience_platform/setting_up_and_maintaining/search_and_indexing/sitecore_azure_search_overview).
 
 Credits: 
-In coming up with a solution we found other these resources helpful: 
+We found these resources helpful when developing this solution: 
 1) Sitecore Solr spatial : https://github.com/ehabelgindy/sitecore-solr-spatial
 2) Sitecore Lucene spatial: https://github.com/aokour/Sitecore.ContentSearch.Spatial
 
