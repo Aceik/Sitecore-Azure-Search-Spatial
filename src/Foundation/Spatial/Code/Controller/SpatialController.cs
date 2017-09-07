@@ -21,7 +21,8 @@ namespace Aceik.Foundation.CloudSpatialSearch.Controller
             IIndexConfiguration indexConfig = new IndexConfiguration();
             IDistanceCalculatorService distanceCalculator = new DistanceCalculatorService();
             ISpatialSearchService spatialSearch = new SpatialSearchService(indexConfig, distanceCalculator);
-            var results = spatialSearch.GetSpatialResultsByDistance(new Location(-26.273714, 149.554685), 10000000, 100);
+            var point = new Location(-26.273714, 149.554685);
+            var results = spatialSearch.GetSpatialResultsByDistance(point, 10000000, 100);
             return this.View("InstallationTest", results);
         }
     }
