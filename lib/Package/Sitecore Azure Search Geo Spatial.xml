@@ -32,7 +32,16 @@ Usage: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/06-Sitecore-P
       <SkipVersions>False</SkipVersions>
       <Converter>
         <ItemToEntryConverter>
-          <Transforms />
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
         </ItemToEntryConverter>
       </Converter>
       <Include />
@@ -49,7 +58,16 @@ Usage: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/06-Sitecore-P
       <Converter>
         <FileToEntryConverter>
           <Root>/</Root>
-          <Transforms />
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
         </FileToEntryConverter>
       </Converter>
       <Include />
@@ -63,13 +81,46 @@ Usage: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/06-Sitecore-P
       <Converter>
         <FileToEntryConverter>
           <Root>/</Root>
-          <Transforms />
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
         </FileToEntryConverter>
       </Converter>
       <Include />
       <Exclude />
       <Name>Installaton Test</Name>
     </xfiles>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/layout/Renderings/Foundation/Spatial/{1E7ED61F-2FDF-44F5-B69D-40420C176F0C}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Renderings/Foundation/Spatial/Spatial Results Test/{C578F41C-285A-4A8F-BF2B-63F56CF8B725}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Installation Test Rendering</Name>
+    </xitems>
   </Sources>
   <Converter>
     <TrivialConverter>

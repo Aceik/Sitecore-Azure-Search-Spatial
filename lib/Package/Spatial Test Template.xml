@@ -1,0 +1,61 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Sitecore-Azure-Search-Spatial  Installation Sample</PackageName>
+      <Author>Thomas Tyack</Author>
+      <Version>v1.0</Version>
+      <Revision />
+      <License />
+      <Comment>See: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/05-Installing-Sitecore-Package</Comment>
+      <Attributes />
+      <Readme />
+      <Publisher />
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/Project/Common/Content Types/SpatialTest/{3DE77A4D-57E2-4FEB-945D-A3EE1992C8BD}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Template</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/content/Home/Spatial Results Test/{D714F977-704E-46F6-A5DF-1413719849D9}/invariant/0</x-item>
+        <x-item>/master/sitecore/content/Home/Spatial Results Test/Spatial Search Items/{1E4DE05A-D05C-4EA9-8FF7-3F465A529181}/invariant/0</x-item>
+        <x-item>/master/sitecore/content/Home/Spatial Results Test/Spatial Search Items/Africa/{BB316536-569E-409C-8C45-60C36536B947}/invariant/0</x-item>
+        <x-item>/master/sitecore/content/Home/Spatial Results Test/Spatial Search Items/Australia Central/{A9D60335-08CD-48CF-88C1-C85F50D073EC}/invariant/0</x-item>
+        <x-item>/master/sitecore/content/Home/Spatial Results Test/Spatial Search Items/South America/{5D776376-9356-4A66-B5FD-F6B9BC1A1870}/invariant/0</x-item>
+        <x-item>/master/sitecore/content/Home/Spatial Results Test/Spatial Search Items/USA/{92DB2714-9AD9-489F-A2FF-EEB96AD1278B}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Spatial Search Page</Name>
+    </xitems>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>
