@@ -1,0 +1,68 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Sitecore Azure Search Geo Spatial</PackageName>
+      <Author>Thomas Tyack</Author>
+      <Version>v1.0</Version>
+      <Revision />
+      <License />
+      <Comment>Instructions: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/05-Installing-Sitecore-Package
+
+Usage: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/06-Sitecore-Package-Usage</Comment>
+      <Attributes />
+      <Readme />
+      <Publisher>Thomas Tyack</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/Foundation/Spatial/_hasCoordinate/{7EED4C41-4F91-4EDB-AB13-1A89092BAA66}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Foundation/Spatial/_hasCoordinate/Coordinates/{AC145D09-9CF4-4437-A4A8-6BAAF352861D}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Foundation/Spatial/_hasCoordinate/Coordinates/Latitude/{ED21E7A6-C30F-4335-B007-577ECD8A7A02}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Foundation/Spatial/_hasCoordinate/Coordinates/Longitude/{022C0182-7B42-4B19-9420-087582CA2063}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Foundation/Spatial/_hasPlaceName/{B73E0FE5-DFEF-49C2-A002-F49C19E9EEFF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Foundation/Spatial/_hasPlaceName/Coordinates/{D0E44FC1-2930-4843-9D5B-D6E570793232}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Foundation/Spatial/_hasPlaceName/Coordinates/PlaceName/{0553B69F-5115-4755-AF49-BE7331CF1EB8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Foundation/Spatial/{FEC95B27-4845-47D8-BA20-B0391E9B0472}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Foundation Templates</Name>
+    </xitems>
+    <xfiles>
+      <Entries>
+        <x-item>/App_Config/Include/Foundation/Foundation.CloudSpatialSearch.config</x-item>
+        <x-item>/App_Config/Include/Foundation/Foundation.CloudSpatialSearch.Master.Index.config</x-item>
+        <x-item>/App_Config/Include/Foundation/Foundation.CloudSpatialSearch.Web.Index.config</x-item>
+        <x-item>/bin/Aceik.Foundation.CloudSpatialSearch.dll</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms />
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Configs and DLLs</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>
