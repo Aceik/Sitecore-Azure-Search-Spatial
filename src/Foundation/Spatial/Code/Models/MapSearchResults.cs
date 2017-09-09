@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
-using Aceik.Foundation.CloudSpatialSearch.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Sitecore.Feature.Maps.Models
+namespace Aceik.Foundation.CloudSpatialSearch.Models
 {
     public class MapSearchResults
     {

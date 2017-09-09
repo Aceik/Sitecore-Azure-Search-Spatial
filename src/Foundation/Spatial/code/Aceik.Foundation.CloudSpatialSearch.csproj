@@ -146,8 +146,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\SpatialController.cs" />
     <Compile Include="IndexRead\Common\GenericDumpable.cs" />
+    <Compile Include="Models\MapSearchResults.cs" />
     <Compile Include="Models\SpatialSearchResultItem.cs" />
     <Compile Include="IndexRead\Searching\Services\SpatialSearchToLinqService.cs" />
     <Compile Include="IndexWrite\Formatter\GeoCloudIndexFieldStorageValueFormatter.cs" />
