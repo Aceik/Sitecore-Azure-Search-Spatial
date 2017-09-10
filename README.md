@@ -16,4 +16,5 @@ We found these resources helpful when developing this solution:
 1) Sitecore Solr spatial : https://github.com/ehabelgindy/sitecore-solr-spatial
 2) Sitecore Lucene spatial: https://github.com/aokour/Sitecore.ContentSearch.Spatial
 
+Thanks also to other Aceik team members that assisted with this solution along the way.  Ed, Jose, Tony. 
 
