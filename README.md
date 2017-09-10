@@ -2,7 +2,7 @@
 
 This repository contains a runnable Sitecore Helix solution ([Helix architecture principles](http://helix.sitecore.net)) that demonstrates how to achieve a relatively fast Geo Spatial search using the Sitecore Azure Search provider. The solution can be installed using the same tools that the Habitat example site requires. 
 
-The core functionality is also available as an [installable Sitecore package.] (../../wiki/05-Installing-Sitecore-Package)
+The core functionality is also available as an [installable Sitecore package](../../wiki/05-Installing-Sitecore-Package)
 A Demo Installation package built from the example helix spatial site can then be installed if you just want to see it in action. 
 
 The key to this search involves enabling Edm.GeographyPoint and the OData Expression Syntax for Azure Search "$filter=geo.distance(location, geography'POINT(Long Lat)') le Radius "
@@ -16,5 +16,5 @@ We found these resources helpful when developing this solution:
 1) Sitecore Solr spatial : https://github.com/ehabelgindy/sitecore-solr-spatial
 2) Sitecore Lucene spatial: https://github.com/aokour/Sitecore.ContentSearch.Spatial
 
-Thanks also to other Aceik team members that assisted with this solution along the way.  Ed, Jose, Tony. 
+Thanks also to other Aceik team members for input and assistance with this solution along the way.  Ed, Jose, Tony. 
 
