@@ -6,9 +6,23 @@
       <Version>v1.0</Version>
       <Revision />
       <License />
-      <Comment>See: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/05-Installing-Sitecore-Package</Comment>
+      <Comment>This is the Sitecore Azure Search Spatial demo installation package. 
+
+Please install the Core package prior to installing this package. 
+Available Here: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/tree/master/lib/Package
+Documentation: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/
+
+Please note this demo is intended to be run on a Vanilla (clean/fresh) installation of Sitecore 8.2.5 or greater.  
+Installing this package will change the homepage item and may override your data.  </Comment>
       <Attributes />
-      <Readme>See: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/05-Installing-Sitecore-Package</Readme>
+      <Readme>This is the Sitecore Azure Search Spatial demo installation package. 
+
+Please install the Core package prior to installing this package. 
+Available Here: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/tree/master/lib/Package
+Documentation: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/
+
+Please note this demo is intended to be run on a Vanilla (clean/fresh) installation of Sitecore 8.2.5 or greater.  
+Installing this package will change the homepage item and may override your data.  </Readme>
       <Publisher>Thomas Tyack</Publisher>
       <PostStep />
       <PackageID />

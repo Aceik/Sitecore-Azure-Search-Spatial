@@ -6,9 +6,20 @@
       <Version>v1.0</Version>
       <Revision />
       <License />
-      <Comment>Instructions: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/05-Installing-Sitecore-Package
+      <Comment>This is the Sitecore Azure Search Spatial installation package. 
 
-Usage: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/06-Sitecore-Package-Usage</Comment>
+Available Here: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/tree/master/lib/Package
+Documentation: https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/
+ 
+For setup instructions after installing this package please visit:
+https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/03-Sitecore-Package-Installing
+
+For further developer instructions please see: 
+https://github.com/Aceik/Sitecore-Azure-Search-Spatial/wiki/06-Sitecore-Package-Usage
+
+A package containing a full running map demo is also available in: 
+https://github.com/Aceik/Sitecore-Azure-Search-Spatial/tree/master/lib/Package
+This demo installation package should be installed after this package. </Comment>
       <Attributes />
       <Readme />
       <Publisher>Thomas Tyack</Publisher>
