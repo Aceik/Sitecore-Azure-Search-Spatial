@@ -10,13 +10,13 @@
 using System;
 using System.Linq.Expressions;
 using System.Reflection;
-using Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Nodes;
-using Aceik.Foundation.CloudSpatialSearch.Models;
 using Sitecore.ContentSearch.Linq.Common;
 using Sitecore.ContentSearch.Linq.Nodes;
 using Sitecore.ContentSearch.Linq.Parsing;
+using Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Nodes;
+using Sitecore.Foundation.CloudSpatialSearch.Models;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Parsing
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Parsing
 {
     /// <summary>
     /// The extended expression parser.

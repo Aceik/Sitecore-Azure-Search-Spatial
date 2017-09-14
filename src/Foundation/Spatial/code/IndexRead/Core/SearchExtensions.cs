@@ -9,16 +9,13 @@
 
 using System;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Provider;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Diagnostics;
 using Sitecore.ContentSearch.Linq.Common;
-using Sitecore.ContentSearch.SearchTypes;
 using Sitecore.ContentSearch.Utilities;
+using Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Provider;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core
 {
     /// <summary>
     /// Enable a search extension to perform a spatial linq query.

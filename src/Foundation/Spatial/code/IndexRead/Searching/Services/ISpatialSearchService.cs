@@ -8,9 +8,9 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;
-using Aceik.Foundation.CloudSpatialSearch.Models;
+using Sitecore.Foundation.CloudSpatialSearch.Models;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
 {
     public interface ISpatialSearchService
     {

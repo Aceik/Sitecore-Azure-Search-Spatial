@@ -2,12 +2,12 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Linq.Expressions;
-using Aceik.Foundation.CloudSpatialSearch.IndexRead.Common;
 using Sitecore.ContentSearch.Linq.Common;
 using Sitecore.ContentSearch.Linq.Indexing;
 using Sitecore.ContentSearch.Linq.Parsing;
+using Sitecore.Foundation.CloudSpatialSearch.IndexRead.Common;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Parsing
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Parsing
 {
     /// <summary>
     /// The extended generic queryable.

@@ -7,20 +7,14 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
-using System.Linq;                            
-using Aceik.Foundation.CloudSpatialSearch.IndexRead.Core;
-using Aceik.Foundation.CloudSpatialSearch.Models;
+using System.Linq;
 using Geocoding;
-using Microsoft.Azure.Search;
-using Microsoft.Azure.Search.Models;
-using Sitecore;
 using Sitecore.ContentSearch;
-using Sitecore.ContentSearch.Azure.Utils;
-using Sitecore.Foundation.DependencyInjection;
+using Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core;
+using Sitecore.Foundation.CloudSpatialSearch.Models;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
 {
     //[Service(typeof(ISpatialSearchService))]
     public class SpatialSearchToLinqService : ISpatialSearchService

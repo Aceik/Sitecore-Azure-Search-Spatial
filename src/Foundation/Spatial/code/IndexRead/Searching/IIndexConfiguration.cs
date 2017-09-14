@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Searching
 {
     public interface IIndexConfiguration
     {

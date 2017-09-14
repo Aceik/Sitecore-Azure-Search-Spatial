@@ -11,7 +11,7 @@ using System.Device.Location;
 using Geocoding;
 using Sitecore.Foundation.DependencyInjection;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
 {
     [Service(typeof(IDistanceCalculatorService))]
     public class DistanceCalculatorService : IDistanceCalculatorService

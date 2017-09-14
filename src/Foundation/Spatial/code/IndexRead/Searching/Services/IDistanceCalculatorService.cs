@@ -9,7 +9,7 @@
 
 using Geocoding;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Searching.Services
 {
     public interface IDistanceCalculatorService
     {

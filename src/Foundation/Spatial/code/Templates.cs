@@ -9,7 +9,7 @@
 
 using Sitecore.Data;
 
-namespace Aceik.Foundation.CloudSpatialSearch
+namespace Sitecore.Foundation.CloudSpatialSearch
 {
     public struct Templates
     {

@@ -10,7 +10,7 @@
 using System.IO;
 using Sitecore.ContentSearch.Linq.Common;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Common
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Common
 {
     public class GenericDumpable : IDumpable
     {

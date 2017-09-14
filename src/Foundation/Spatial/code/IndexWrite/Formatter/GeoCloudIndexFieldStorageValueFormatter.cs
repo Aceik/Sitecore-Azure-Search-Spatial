@@ -11,7 +11,7 @@ using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Azure;
 using Sitecore.ContentSearch.Azure.Converters;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexWrite.Formatter
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexWrite.Formatter
 {
     /// <summary>
     /// The geo cloud index field storage value formatter.

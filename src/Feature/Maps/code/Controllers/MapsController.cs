@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching.Services;
+using Sitecore.Foundation.CloudSpatialSearch.IndexRead.Searching.Services;
 using Geocoding;
 using Geocoding.Google;
+using Sitecore.Foundation.CloudSpatialSearch.Models;
 
 namespace Sitecore.Feature.Maps.Controllers
 {
     using System;
     using System.Web.Mvc;
-    using Aceik.Foundation.CloudSpatialSearch.Models;
 
     public class MapsController : Mvc.Controllers.SitecoreController
     {

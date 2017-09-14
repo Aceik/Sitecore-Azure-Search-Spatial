@@ -8,13 +8,13 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;
-using Aceik.Foundation.CloudSpatialSearch.Models;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.ComputedFields;
 using Sitecore.Diagnostics;
+using Sitecore.Foundation.CloudSpatialSearch.Models;
 using Sitecore.Foundation.SitecoreExtensions.Extensions;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexWrite.Computed
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexWrite.Computed
 {
     public class GeoLocationField : IComputedIndexField
     {

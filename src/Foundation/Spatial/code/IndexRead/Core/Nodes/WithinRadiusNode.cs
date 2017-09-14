@@ -10,7 +10,7 @@
 using System.Collections.Generic;
 using Sitecore.ContentSearch.Linq.Nodes;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Nodes
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Nodes
 {
     public class WithinRadiusNode : QueryNode
     {

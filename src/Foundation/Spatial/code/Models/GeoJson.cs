@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Aceik.Foundation.CloudSpatialSearch.Models
+namespace Sitecore.Foundation.CloudSpatialSearch.Models
 {
     public class GeoJson
     {

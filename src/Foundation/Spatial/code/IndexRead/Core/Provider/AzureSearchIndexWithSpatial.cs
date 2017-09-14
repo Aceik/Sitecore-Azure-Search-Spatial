@@ -14,7 +14,7 @@ using Sitecore.ContentSearch.Azure.Http;
 using Sitecore.ContentSearch.Azure.Schema;
 using Sitecore.ContentSearch.Maintenance;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
 {
     /// <summary>
     /// The azure search index with spatial.
@@ -23,7 +23,7 @@ namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
     {
         /// <inheritdoc />
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Provider.AzureSearchIndexWithSpatial" /> class.
+        /// Initializes a new instance of the <see cref="T:Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Provider.AzureSearchIndexWithSpatial" /> class.
         /// </summary>
         /// <param name="name">
         /// The name.

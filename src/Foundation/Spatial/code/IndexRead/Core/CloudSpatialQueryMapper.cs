@@ -8,15 +8,11 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 
-using System.Collections.Generic;
-using Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Nodes;
 using Sitecore.ContentSearch.Azure.Query;
-using Sitecore.ContentSearch.Linq.Common;
-using Sitecore.ContentSearch.Linq.Methods;
 using Sitecore.ContentSearch.Linq.Nodes;
-using Sitecore.ContentSearch.Linq.Parsing;
+using Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Nodes;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core
 {
     public class CloudSpatialQueryMapper : CloudQueryMapper
     {

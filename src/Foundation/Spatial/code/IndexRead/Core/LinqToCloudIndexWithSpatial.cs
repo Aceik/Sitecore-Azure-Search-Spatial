@@ -10,14 +10,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Parsing;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Azure;
 using Sitecore.ContentSearch.Azure.Query;
 using Sitecore.ContentSearch.Linq.Common;
 using Sitecore.ContentSearch.Linq.Parsing;
+using Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Parsing;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core
 {
     public class LinqToCloudIndexWithSpatial<TItem> : LinqToCloudIndex<TItem>
     {           

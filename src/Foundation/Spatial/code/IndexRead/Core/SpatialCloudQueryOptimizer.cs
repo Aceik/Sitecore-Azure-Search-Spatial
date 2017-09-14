@@ -7,11 +7,11 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Nodes;
 using Sitecore.ContentSearch.Azure.Query;
 using Sitecore.ContentSearch.Linq.Nodes;
+using Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Nodes;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core
 {
     /// <summary>
     /// The spatial cloud query optimizer.

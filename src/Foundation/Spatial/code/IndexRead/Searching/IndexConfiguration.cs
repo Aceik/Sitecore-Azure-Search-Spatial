@@ -9,7 +9,7 @@
 
 using Sitecore.Foundation.DependencyInjection;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Searching
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Searching
 {
     [Service(typeof(IIndexConfiguration))]
     public class IndexConfiguration : IIndexConfiguration

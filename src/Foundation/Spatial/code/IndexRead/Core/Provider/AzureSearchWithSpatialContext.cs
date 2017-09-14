@@ -19,9 +19,9 @@ using Sitecore.ContentSearch.Security;
 using Sitecore.ContentSearch.Utilities;
 using Sitecore.Diagnostics;
 
-namespace Aceik.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
+namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
 {
-    using ISettings = Sitecore.ContentSearch.Abstractions.ISettings;
+    using ISettings = ContentSearch.Abstractions.ISettings;
 
     /// <summary>
     /// The azure search with spatial context.

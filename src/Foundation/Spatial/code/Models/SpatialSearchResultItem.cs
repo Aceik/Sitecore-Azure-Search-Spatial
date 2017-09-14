@@ -7,14 +7,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
 using Microsoft.Azure.Search;
+using Newtonsoft.Json;
 using Sitecore.ContentSearch;
-using Sitecore.ContentSearch.SearchTypes;
 
-namespace Aceik.Foundation.CloudSpatialSearch.Models
+namespace Sitecore.Foundation.CloudSpatialSearch.Models
 {
     [DataContract]
     public class SpatialSearchResultItem
