@@ -64,7 +64,7 @@ This demo installation package should be installed after this package. </Comment
         <x-item>/App_Config/Include/Foundation/Foundation.CloudSpatialSearch.config</x-item>
         <x-item>/App_Config/Include/Foundation/Foundation.CloudSpatialSearch.Master.Index.config</x-item>
         <x-item>/App_Config/Include/Foundation/Foundation.CloudSpatialSearch.Web.Index.config</x-item>
-        <x-item>/bin/Aceik.Foundation.CloudSpatialSearch.dll</x-item>
+        <x-item>/bin/Sitecore.Foundation.CloudSpatialSearch.dll</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>
@@ -85,18 +85,6 @@ This demo installation package should be installed after this package. </Comment
       <Exclude />
       <Name>Configs and DLLs</Name>
     </xfiles>
-    <xitems>
-      <Entries />
-      <SkipVersions>False</SkipVersions>
-      <Converter>
-        <ItemToEntryConverter>
-          <Transforms />
-        </ItemToEntryConverter>
-      </Converter>
-      <Include />
-      <Exclude />
-      <Name />
-    </xitems>
     <xfiles>
       <Entries>
         <x-item>/bin/Microsoft.Azure.Search.dll</x-item>
