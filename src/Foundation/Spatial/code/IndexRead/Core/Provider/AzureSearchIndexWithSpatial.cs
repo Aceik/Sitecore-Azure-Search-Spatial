@@ -37,55 +37,10 @@ namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
         /// <param name="propertyStore">
         /// The property store.
         /// </param>
-        public AzureSearchIndexWithSpatial(string name, string connectionStringName, string totalParallelServices, IIndexPropertyStore propertyStore) : this(name, connectionStringName, totalParallelServices, propertyStore, null)
+        public AzureSearchIndexWithSpatial(string name, string connectionStringName, string totalParallelServices, IIndexPropertyStore propertyStore) : base(name, connectionStringName, totalParallelServices, propertyStore)
         {
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AzureSearchIndexWithSpatial"/> class.
-        /// </summary>
-        /// <param name="name">
-        /// The name.
-        /// </param>
-        /// <param name="connectionStringName">
-        /// The connection string name.
-        /// </param>
-        /// <param name="totalParallelServices">
-        /// The total parallel services.
-        /// </param>
-        /// <param name="propertyStore">
-        /// The property store.
-        /// </param>
-        /// <param name="group">
-        /// The group.
-        /// </param>
-        public AzureSearchIndexWithSpatial(string name, string connectionStringName, string totalParallelServices, IIndexPropertyStore propertyStore, string group) : base(name, connectionStringName, totalParallelServices, propertyStore, group)
-        {
-        }
-
-        public new ICloudSearchIndexSchemaBuilder SchemaBuilder
-        {
-            get;
-            set;
-        }
-
-        public new ISearchService SearchService
-        {
-            get;
-            set;
-        }
-
-        public new ICloudSearchIndexConfiguration CloudConfiguration
-        {
-            get;
-            set;
-        }
-
-        internal string ConnectionStringName
-        {
-            get;
-            set;
-        }
 
         /// <summary>
         /// The create search context.
@@ -98,7 +53,7 @@ namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
         /// </returns>
         public override IProviderSearchContext CreateSearchContext(Sitecore.ContentSearch.Security.SearchSecurityOptions options = Sitecore.ContentSearch.Security.SearchSecurityOptions.EnableSecurityCheck)
         {
-            return new AzureSearchWithSpatialContext(this,options);
+            return new AzureSearchWithSpatialContext(this.ServiceCollectionClient,options);
         }
     }
 }
