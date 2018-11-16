@@ -10,6 +10,7 @@
 using System;
 using System.Linq;
 using Sitecore.ContentSearch;
+using Sitecore.ContentSearch.Azure;
 using Sitecore.ContentSearch.Diagnostics;
 using Sitecore.ContentSearch.Linq.Common;
 using Sitecore.ContentSearch.Utilities;
@@ -30,9 +31,10 @@ namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core
         public static IQueryable<TResult> GetExtendedQueryable<TResult>(this IProviderSearchContext context, params IExecutionContext[] executionContext)
         {
             IQueryable<TResult> queryable;
-            if (context is AzureSearchWithSpatialContext cloudContext)
+            var cloudContext = context as AzureSearchWithSpatialContext;
+            if (cloudContext != null)
             {
-                queryable = GetCloudQueryable<TResult>(cloudContext, executionContext);
+                queryable = GetCloudQueryable<TResult>(cloudContext, executionContext, cloudContext.Client);
             }
             else
             {
@@ -41,9 +43,9 @@ namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core
             return queryable;
         }
 
-        private static IQueryable<TResult> GetCloudQueryable<TResult>(AzureSearchWithSpatialContext context, IExecutionContext[] executionContext)
+        private static IQueryable<TResult> GetCloudQueryable<TResult>(AzureSearchWithSpatialContext context, IExecutionContext[] executionContext, ServiceCollectionClient serviceCollectionClient)
         {
-            var linqToCloudIndexWithSpatial = new LinqToCloudIndexWithSpatial<TResult>(context, executionContext);
+            var linqToCloudIndexWithSpatial = new LinqToCloudIndexWithSpatial<TResult>(context, executionContext, serviceCollectionClient);
             if (context.Index.Locator.GetInstance<IContentSearchConfigurationSettings>().EnableSearchDebug())
                 ((IHasTraceWriter)linqToCloudIndexWithSpatial).TraceWriter = new LoggingTraceWriter(SearchLog.Log);
             return linqToCloudIndexWithSpatial.GetQueryable();

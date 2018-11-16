@@ -7,6 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Linq;
 using Sitecore.Abstractions;
 using Sitecore.ContentSearch;
@@ -28,6 +29,7 @@ namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
     /// </summary>
     public class AzureSearchWithSpatialContext : CloudSearchSearchContext, IProviderSearchContext
     {
+        public ServiceCollectionClient Client { get; private set; }
         /// <summary>
         /// The index.
         /// </summary>
@@ -57,12 +59,15 @@ namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
         /// <param name="options">
         /// The options.
         /// </param>
-        public AzureSearchWithSpatialContext(CloudSearchProviderIndex index, SearchSecurityOptions options = SearchSecurityOptions.EnableSecurityCheck)
-            : base(index, options)
+        public AzureSearchWithSpatialContext(ServiceCollectionClient serviceCollectionClient, SearchSecurityOptions options = SearchSecurityOptions.EnableSecurityCheck)
+            : base(serviceCollectionClient, options)
         {
-            Assert.ArgumentNotNull((object)index, "index");
+            Assert.ArgumentNotNull((object)serviceCollectionClient, "serviceCollectionClient");
             Assert.ArgumentNotNull((object)options, "options");
-            this.index = index;
+
+            Client = serviceCollectionClient;
+
+            this.index = (CloudSearchProviderIndex)serviceCollectionClient.GetInstance<AbstractSearchIndex>(Array.Empty<object>());
             this.contentSearchSettings = this.index.Locator.GetInstance<IContentSearchConfigurationSettings>();
             this.settings = this.index.Locator.GetInstance<ISettings>();
             this.securityOptions = options;
@@ -113,7 +118,7 @@ namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
         /// </returns>
         public new IQueryable<TItem> GetQueryable<TItem>(params IExecutionContext[] executionContexts)
         {
-            var linqToSolrIndex = new LinqToCloudIndexWithSpatial<TItem>(this, executionContexts);
+            var linqToSolrIndex = new LinqToCloudIndexWithSpatial<TItem>(this, executionContexts, Client);
             if (this.contentSearchSettings.EnableSearchDebug())
                 ((IHasTraceWriter)linqToSolrIndex).TraceWriter = new LoggingTraceWriter(SearchLog.Log);
 
@@ -121,7 +126,7 @@ namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core.Provider
             if (typeof(TItem).IsAssignableFrom(typeof(SearchResultItem)))
             {
                 var globalFiltersArgs = new QueryGlobalFiltersArgs(linqToSolrIndex.GetQueryable(), typeof(TItem), executionContexts.ToList());
-                this.Index.Locator.GetInstance<ICorePipeline>().Run("contentSearch.getGlobalLinqFilters", globalFiltersArgs);
+                this.Index.Locator.GetInstance<BaseCorePipelineManager>().Run("contentSearch.getGlobalLinqFilters", globalFiltersArgs);
                 queryable = (IQueryable<TItem>)globalFiltersArgs.Query;
             }
             return queryable;

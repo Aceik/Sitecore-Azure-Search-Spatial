@@ -24,15 +24,10 @@ namespace Sitecore.Foundation.CloudSpatialSearch.IndexRead.Core
         private readonly QueryMapper<CloudQuery> queryMapper;
         private readonly QueryOptimizer<CloudQueryOptimizerState> queryOptimizer; 
 
-        public LinqToCloudIndexWithSpatial(CloudSearchSearchContext context, IExecutionContext executionContext) : this(context, new IExecutionContext[] { executionContext })
-        {
-            
-        }
 
-        public LinqToCloudIndexWithSpatial(CloudSearchSearchContext context, IExecutionContext[] executionContexts) : base(context, executionContexts)
+        public LinqToCloudIndexWithSpatial(CloudSearchSearchContext context, IExecutionContext[] executionContexts, ServiceCollectionClient serviceCollectionClient) : base(context, executionContexts, serviceCollectionClient)
         {
-            var parameters = new CloudIndexParameters(context.Index.Configuration.IndexFieldStorageValueFormatter, context.Index.Configuration.VirtualFields, context.Index.FieldNameTranslator, typeof(TItem), false, executionContexts, context.Index.Schema);
-            this.queryMapper = new CloudSpatialQueryMapper(parameters);
+            this.queryMapper = new CloudSpatialQueryMapper(this.Parameters);
             this.queryOptimizer = new SpatialCloudQueryOptimizer();
         }
 
